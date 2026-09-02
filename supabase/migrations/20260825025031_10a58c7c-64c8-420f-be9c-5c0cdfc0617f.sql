@@ -6,7 +6,7 @@ CREATE TABLE public.routes (
   color text NOT NULL DEFAULT '#1d4ed8',
   path jsonb NOT NULL DEFAULT '[]'::jsonb,
   created_at timestamptz NOT NULL DEFAULT now()
-);
+); 
 GRANT SELECT ON public.routes TO anon;
 GRANT SELECT, INSERT, UPDATE, DELETE ON public.routes TO authenticated;
 GRANT ALL ON public.routes TO service_role;
