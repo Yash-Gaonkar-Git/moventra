@@ -78,7 +78,7 @@ export function PassengerSearch({
           id="transit-search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search bus, stop or destination"
+          placeholder="Try Bus 101, a stop, or destination"
           autoComplete="off"
           className="h-14 w-full rounded-xl border-2 border-input bg-background pl-11 pr-11 text-base font-medium outline-none focus:border-primary"
         />
