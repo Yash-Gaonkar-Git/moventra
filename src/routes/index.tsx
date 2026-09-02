@@ -49,15 +49,20 @@ const ROLES = [
 
 function Index() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="tt-page-glow flex min-h-screen flex-col bg-background text-foreground">
       <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-4 py-10 sm:py-16">
         <header className="text-center">
-          <span className="mx-auto grid size-14 place-items-center rounded-2xl bg-[var(--brand-deep)] text-primary-foreground">
+          <span className="tt-brand-mark mx-auto grid size-16 place-items-center rounded-2xl bg-[var(--brand-deep)] text-primary-foreground shadow-lg">
             <Bus className="size-7" />
           </span>
           <h1 className="mt-5 font-display text-3xl font-bold uppercase tracking-wider sm:text-5xl">
             🚌 TransitTrack
           </h1>
+          <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-accent" />
+          <span className="mx-auto mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+            <span className="size-1.5 animate-pulse rounded-full bg-primary" />
+            Live tracking
+          </span>
           <p className="mt-3 text-base text-muted-foreground sm:text-lg">
             Choose how you want to use TransitTrack
           </p>
@@ -68,7 +73,7 @@ function Index() {
             <Link
               key={r.to}
               to={r.to}
-              className="group flex min-h-[9rem] flex-col rounded-2xl border-2 border-border bg-card p-6 text-left shadow-[var(--shadow-panel)] transition hover:border-primary hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+              className="tt-role-card group flex min-h-[10rem] flex-col rounded-2xl border border-border bg-card/95 p-6 text-left shadow-[var(--shadow-panel)] backdrop-blur-sm transition hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
             >
               <span aria-hidden className="text-4xl">
                 {r.emoji}
